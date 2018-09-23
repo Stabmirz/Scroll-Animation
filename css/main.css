@@ -1,0 +1,47 @@
+body{
+    margin:0;
+}
+
+.container{
+    background: url('../images/background.jpg') 0 0 no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 3500px;
+    width: 100%
+}
+
+#zombie{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -100px;
+    margin: auto;
+    background: url('../images/zombie.png') 0 0 no-repeat;
+    width: 123px;
+    height: 80px;
+    background-size: 738px 160px;
+    transition: top 1s ease;
+    transform: rotate(90deg) scale(2);
+}
+
+.animate{
+    animation: move 1s steps(6) infinite;
+}
+
+@keyframes move{
+    from{
+        background-position-x: 0;
+    }
+    to{
+        background-position-x: -738px;
+    }
+}
+
+@keyframes jump{
+    from{
+        background-position-y: 0;
+    }
+    to{
+        background-position-y: -160px;
+    }
+}
